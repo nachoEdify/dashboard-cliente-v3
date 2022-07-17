@@ -1,0 +1,76 @@
+{
+    "serve": "¿Who serve you this time?",
+    "valoration": "How would you rate the service of",
+    "valorations": {
+        "very_bad": "😓 Very bad",
+        "bad": "😞 Bad",
+        "normal": "🙂 Normal",
+        "good": "😄 Good",
+        "fantastic": "🎉 Fantastic"
+    },
+    "tipping": {
+        "title": "How much tip would you like to give",
+        "description": "You can choose what you want, the tip will be full for {{name}}, Proppi does not keep anything.",
+        "button": {
+            "disabled": "Write to continue...",
+            "enabled": "Next"
+        }
+    },
+    "add_credit_card": {
+        "title": "Brilliant! {{tip}} tip for",
+        "description": "Write your card to complete the payment.",
+        "button": "Confirm payment",
+        "error": {
+            "title": "😔 There was an error with your tip for",
+            "description": "We were unable to charge your card. What do you want us to do?",
+            "button": {
+                "yes": "Try another card",
+                "no": "Retry"
+            }
+        }
+    },
+    "finish": {
+        "tip": {
+            "title": "Brilliant! Your tip has been sent to",
+            "description": "If you want we can send you the receipt by email, you will also be able to see all the tips you have sent with Proppi and your card will be saved for greater ease."
+        },
+        "noTip": {
+            "title": "Brilliant! Your review has been sent to",
+            "description": "If you want you can access the proppi panel and you can see all the reviews you have sent with Proppi."
+        },
+        "register": {
+            "email": "Write your email",
+            "terms": "I accept the terms and conditions of the service."
+        },
+        "button": {
+            "no": "Some other time...",
+            "yes": "Save"
+        }
+    },
+    "account_created": {
+        "title": "Your account has been successfully created!",
+        "description": "We have sent you an email to confirm your account. Now you can make all the tips you want in just one click!",
+        "box": {
+            "title": "Welcome to Proppi!",
+            "description": "Hello {{email}}, thanks for"
+        },
+        "button": "Next",
+        "date": "Today"
+    },
+    "review": {
+        "title": "Write a review on Google.",
+        "description": "You can leave a review on Google, it will help us continue to grow and reach more people who, like you, have enjoyed our service.",
+        "button": {
+            "yes": "Write a review",
+            "no": "Some other time..."
+        }
+    },
+    "recommend": {
+        "title": "Recommend Voltereta Bali to your friends",
+        "description": "You can invite your friends or family to visit our establishment one day.",
+        "button": {
+            "yes": "Recommend",
+            "no": "Some other time..."
+        }
+    }
+}
