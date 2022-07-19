@@ -1,12 +1,39 @@
 import React from 'react'
 import { BiBed, BiCube } from 'react-icons/bi';
+import { BsFillHeartFill } from 'react-icons/bs'
 import { numberWithCommas } from '../../utils/numberWithCommas';
 import CardButton from '../CardButton/CardButton';
+import Tag from '../Tag/Tag';
 
-const PropertyCard = ({ price, area, rooms, width = '10.125rem', height = '13.125rem', onClick }) => {
+const PropertyCard = ({ 
+    price, 
+    area, 
+    rooms, 
+    like, 
+    onClick,
+    tag, 
+    tagColor,
+    width = '10.125rem', 
+    height = '13.125rem', 
+}) => {
     return (
-        <CardButton width={width} height={height} onClick={onClick} >
+        <CardButton width={width} height={height} onClick={onClick} brightness="0.90" >
             <CardButton.Image image="/img/resources/CardButtons/image.png" >
+                {like &&
+                    <div className="absolute top-0 left-0 p-4 text-error-500 text-xl">
+                        <BsFillHeartFill />
+                    </div>
+                }
+                {tag &&
+                    <div className="absolute top-0 left-0 p-4 text-error-500 text-xl">
+                        <Tag 
+                            name={tag} 
+                            color={tagColor || '#B42318'} 
+                            size="sm" 
+                            bullet={false} 
+                        />
+                    </div>
+                }
                 <div className="absolute bottom-0 left-0 p-4 space-y-1">
                     <div className="text-xl text-white">
                         {numberWithCommas(price)} €

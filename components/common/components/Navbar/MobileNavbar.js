@@ -25,7 +25,7 @@ const MobileNavbar = ({ userInfo, children, handleGetMe }) => {
                 {React.cloneElement(children, { userInfo, handleGetMe })}
             </div>
             <div
-                className="fixed bg-white bottom-0 left-0 p-3.5 w-full border-t flex items-center space-x-4 justify-center"
+                className="fixed bg-white bottom-0 left-0 p-3.5 w-full border-t flex items-center space-x-4 z-max justify-center"
             >
                 {routes.map((route, index) => {
                     return(

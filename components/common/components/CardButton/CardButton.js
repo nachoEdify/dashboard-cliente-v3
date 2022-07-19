@@ -1,7 +1,18 @@
 import React from 'react'
 import { Avatar, Button } from '@nextui-org/react';
 
-const CardButton = ({ title, avatar, color = 'primary', onClick, children, shadow, width = '100%', height= 'max-content', ...props }) => {
+const CardButton = ({ 
+    title, 
+    avatar, 
+    color = 'primary',
+    brightness = '0.98',
+    onClick, 
+    children, 
+    shadow,  
+    width = '100%', 
+    height= 'max-content', 
+    ...props 
+}) => {
     return (
         <Button 
             onClick={onClick}
@@ -18,16 +29,17 @@ const CardButton = ({ title, avatar, color = 'primary', onClick, children, shado
                 border: children ? 'none!important' : '1px solid #D7DFE9!important',
                 background: 'white!important', // colors.pink800
                 color: '#171F46!important',
-                boxShadow: shadow ? '0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06)!important' :'none!important', // shadows.md
+                transition: 'all 0.3s',
+                boxShadow: shadow ? '0px 4px 8px -2px rgba(16, 24, 40, 0.06), 0px 2px 4px -2px rgba(16, 24, 40, 0.06)!important' :'none!important', // shadows.md
                 '&:hover': {
-                  background: `$${color}!important`,
-                  color: 'white!important',
+                    filter: `brightness(${brightness})`,
+                    transition: 'all 0.3s'
                 },
                 '&:active': {
-                  background: `$${color}!important`,
+                    background: `#f1f5f9!important`,
                 },
                 '&:focus': {
-                  borderColor: `$${color}!important`,
+                    borderColor: `#f1f5f9!important`,
                 },
             }}
             {...props}

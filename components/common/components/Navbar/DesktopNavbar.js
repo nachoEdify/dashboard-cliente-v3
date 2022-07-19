@@ -3,19 +3,29 @@ import Router from 'next/router';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Avatar, Dropdown, Text } from '@nextui-org/react';
-import { BiMessageAltDetail, BiPlus } from 'react-icons/bi' 
+import { BiListCheck, BiMessageAltDetail, BiPlus } from 'react-icons/bi' 
 import { FiSettings } from 'react-icons/fi'
 import ButtonComponent from '../Button/ButtonComponent';
 import { routes } from '../../../routes/routes';
 
 
-const DesktopNavbar = ({ userInfo, children }) => {
+const DesktopNavbar = ({ userInfo, children, setSelectedNavView, selectedNavView }) => {
 
     const { asPath } = useRouter()
 
     const handleLogout = () =>{
         localStorage.removeItem('token')
         Router.push('/')
+    }
+
+    const handleSetNavView = (nav) =>{
+        if(selectedNavView === nav){
+            if(!asPath?.includes('home')){
+                setSelectedNavView('')
+            }
+        }else{
+            setSelectedNavView(nav)
+        }
     }
 
     return (
@@ -41,8 +51,8 @@ const DesktopNavbar = ({ userInfo, children }) => {
                     })}
                 </div>
                 <div className="w-2/12 flex items-center justify-end space-x-6">
-                    <FiSettings size="20" className="text-gray-500 cursor-pointer hover:text-gray-600 duration-200 transition-colors" />
-                    <BiMessageAltDetail size="22" className="text-gray-500 cursor-pointer hover:text-gray-600 duration-200 transition-colors" />
+                    <BiMessageAltDetail onClick={()=>handleSetNavView('notes')} size="22" className={`text-gray-500 cursor-pointer hover:bg-secondary-orange hover:text-primary-orange duration-200 hover:opacity-80 transition-all h-[40px] w-[40px] p-2 rounded ${selectedNavView === 'notes' && 'bg-secondary-orange text-primary-orange duration-200 transition-all'}`} />
+                    <BiListCheck onClick={()=>handleSetNavView('activity')} size="22" className={`text-gray-500 cursor-pointer hover:bg-secondary-orange hover:text-primary-orange duration-200 hover:opacity-80 transition-all h-[40px] w-[40px] p-2 rounded ${selectedNavView === 'activity' && 'bg-secondary-orange text-primary-orange duration-200 transition-all'} `} />
                     <Dropdown placement="bottom-right">
                         <Dropdown.Trigger>
                             <Avatar className="cursor-pointer" size="lg" text={userInfo?.name} src={"https://i.pravatar.cc/300"} />

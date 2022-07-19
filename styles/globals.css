@@ -7,6 +7,11 @@
     src: url("/fonts/Inter-Medium.ttf");
 }
 @font-face {
+    font-family: "interLight";
+    src: url("/fonts/Inter-Light.ttf");
+    font-weight: bold;
+}
+@font-face {
     font-family: "interThin";
     src: url("/fonts/Inter-Regular.ttf");
     font-weight: bold;
@@ -29,6 +34,10 @@
 
 .font-inter {
     font-family: "inter";
+}
+
+.font-light{
+    font-family: "interLight";
 }
 
 .font-thin{
@@ -62,10 +71,6 @@ body{
     background-color: white !important;
 }
 
-.nextui-checkbox-container{
-    --nextui--checkboxColor: #004466;
-    --nextui--checkboxColorHover: #002d44;
-}
 
 /*  -----  */
 
@@ -142,6 +147,20 @@ body{
 
 /* -----  */
 
+.line-clamp-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
 .line-clamp-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -154,6 +173,18 @@ body{
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;  
     overflow: hidden;
+}
+
+.line-timeline:before {
+    content: "";
+    width: 1px;
+    height: 60%;
+    background: transparent;
+    border: 1px solid #E4E7EC;
+    display: block;
+    position: absolute;
+    top: 72px;
+    left: 28px;
 }
 
 .scroll-transparent::-webkit-scrollbar{

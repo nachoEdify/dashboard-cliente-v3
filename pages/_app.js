@@ -4,6 +4,7 @@ import { createTheme, NextUIProvider } from '@nextui-org/react';
 import { appWithTranslation } from 'next-i18next'
 import { Toaster } from 'react-hot-toast'
 
+import 'dayjs/locale/es'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
@@ -34,11 +35,22 @@ function MyApp({ Component, pageProps }) {
         secondarySolidContrast: '#E16736',
         secondaryShadow: '#FFEEE8',
 
-        
+        errorLight: '#FEE4E2',
+        errorLightHover: '#FEE4E2',
+        errorLightActive: '#FEE4E2',
+        errorLightContrast: '#B42318',
+        error: '#F04438',
+        errorBorder: '#F04438',
+        errorBorderHover: '#F04438',
+        errorSolidHover: '#F04438',
+        errorSolidContrast: '$white',
+        errorShadow: '#F04438',
+
+
         primaryDefault: '#E16736',
         secondaryDefault: '#FFEEE8',
         primaryGreen: '#143233',
-        secondaryGreen: '#467678'
+        secondaryGreen: '#467678',
       },
       space: {},
       fonts: {}
