@@ -26,6 +26,7 @@ const FormInputs = ({ handleJoin }) => {
                         type="email" 
                         bordered
                         size="lg"
+                        aria-label="Email"
                         fullWidth
                         placeholder="Ingresa tu email aqui..." 
                     />

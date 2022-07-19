@@ -1,7 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion';
-import { Input } from '@nextui-org/react'
-import { FcGoogle } from 'react-icons/fc'
 import ButtonComponent from '../../../common/components/Button/ButtonComponent';
 import InputCode from '../../../common/components/InputCode/InputCode';
 
