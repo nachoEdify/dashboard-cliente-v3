@@ -21,7 +21,7 @@ const Quotes = ({ title }) => {
                     />
                     <div className="absolute bottom-0 left-0 space-y-3">
                         <div className="text-gray-800 text-2xl font-semibold w-2/3 line-clamp-3">
-                            "{title}"
+                            &quot;{title}&quot;
                         </div>
                         <div className="text-gray-500 text-sm flex items-center space-x-3">
                             <span>Ver esta historia</span>

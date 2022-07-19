@@ -13,8 +13,8 @@ const LogTimeline = ({ logs }) => {
                 <span className="text-gray-400 text-base">Actividad</span>
             </div>
             <div className="space-y-8">
-                {logs?.map((log)=>(
-                    <div className="line-timeline flex items-start py-3 relative">
+                {logs?.map((log, index)=>(
+                    <div key={index} className="line-timeline flex items-start py-3 relative">
                         <div className="w-16">
                             <div className="w-14 h-14 rounded-full flex justify-center items-center bg-secondary-orange text-primary-orange text-xl uppercase">
                                 {log?.updatedBy?.avatar?.includes('null') || !log?.updatedBy?.avatar ? (<>
