@@ -44,7 +44,7 @@ const InputCode = ({ setValue, size = 6 }) => {
             newObj[i] = ''
         }
         setInputValues(newObj)
-    }, [])
+    }, [size])
     
 
     return (
