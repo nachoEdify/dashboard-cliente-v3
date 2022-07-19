@@ -6,7 +6,7 @@ const News = ({ title, subtitle, description, image }) => {
         <div className="bg-gray-700 relative h-60 w-full rounded-lg active:scale-98 transition-all duration-200 hover:brightness-90 cursor-pointer shadow-[inset_15px_15px_20px_rgba(255,255,255,0.2)]">
             <div className="absolute bottom-0 right-0 w-64 h-48 rounded-br-lg">
                 <div className="relative w-full h-full rounded-br-lg">
-                    <img src={image} className="w-full h-full object-cover rounded-br-lg" />
+                    <img alt="news_image" src={image} className="w-full h-full object-cover rounded-br-lg" />
                     <div className="absolute top-0 left-0 w-full h-full shadow-[inset_70px_70px_20px_-15px_rgba(52,64,84,1)] rounded-br-lg" />
                 </div>
             </div>

@@ -5,7 +5,7 @@ import { BiRightArrowAlt } from 'react-icons/bi';
 const ShareFriends = () => {
     return (
         <div className="bg-white relative h-60 w-full rounded-lg active:scale-98 transition-all duration-200 hover:brightness-[99%] cursor-pointer border">
-            <img src="/img/resources/BlockCards/Circle.png" className="w-full h-full object-contain object-right" />
+            <img alt="share_image" src="/img/resources/BlockCards/Circle.png" className="w-full h-full object-contain object-right" />
             <div className="absolute top-0 left-0 p-6 w-full h-full">
                 <div className="relative w-full h-full">
                     <Avatar.Group className="ml-2">

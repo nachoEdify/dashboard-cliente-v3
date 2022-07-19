@@ -15,7 +15,7 @@ const MobileNavbar = ({ userInfo, children, handleGetMe }) => {
         <div className="bg-[#F2F4F7] min-h-screen lg:hidden">
             <div className="p-3.5 flex items-center justify-between border-b">
                 <div>
-                    <img src="/img/logos/isotipo@vector.svg" className="w-8" />
+                    <img alt="edify" src="/img/logos/isotipo@vector.svg" className="w-8" />
                 </div>
                 <div className="text-gray-300">
                     <BiMessageAltDetail size="28" />

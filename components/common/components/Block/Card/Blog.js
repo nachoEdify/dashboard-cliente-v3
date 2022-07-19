@@ -4,7 +4,7 @@ import { BiRightArrowAlt } from 'react-icons/bi';
 const Blog = ({ title, subtitle, description, image }) => {
     return (
         <div className=" bg-white relative h-60 w-full rounded-lg active:scale-98 transition-all duration-200 hover:brightness-95 cursor-pointer">
-            <img src={image} className="w-full h-full object-cover rounded-lg opacity-50" />
+            <img alt="blog_image" src={image} className="w-full h-full object-cover rounded-lg opacity-50" />
             <div className="absolute top-0 left-0 w-full h-full p-6 space-y-3">
                 <div className="text-2xl text-gray-800 font-semibold">
                     {title}

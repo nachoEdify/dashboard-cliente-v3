@@ -36,7 +36,7 @@ const MotionModal = ({ layoutId, visible, setVisible }) => {
                 >
                     <motion.div className="bg-white lg:rounded-2xl w-full lg:w-[60%] h-screen lg:h-[90vh] m-auto" layoutId={`card-container-${layoutId}`}>
                         <div className="h-96 w-full relative">
-                            <img src="/img/resources/CardButtons/amp.jpg" className="object-cover w-full h-full lg:rounded-t-2xl" />
+                            <img alt="modal_image" src="/img/resources/CardButtons/amp.jpg" className="object-cover w-full h-full lg:rounded-t-2xl" />
                         </div>
                         <div className="p-8 text-xl">
                             <h1>

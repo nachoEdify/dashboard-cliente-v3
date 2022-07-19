@@ -13,7 +13,7 @@ const CodeInput = () => {
             animate={{ opacity: 1 }}
         >
             <div>
-                <img src="/img/logos/logo-edify-color.png" className="w-24" />
+                <img alt="logo_image" src="/img/logos/logo-edify-color.png" className="w-24" />
             </div>
             <div>
                 <h1 className="text-3xl font-bold">Introduce el código enviado.</h1>

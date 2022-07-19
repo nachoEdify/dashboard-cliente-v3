@@ -15,13 +15,13 @@ const Login = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 h-screen">
             <div className="col-span-1 hidden lg:flex">
                 <div className="h-screen w-full">
-                    <img src="/img/resources/login/desktop.png" className="object-cover w-full h-full" />
+                    <img alt="login_image" src="/img/resources/login/desktop.png" className="object-cover w-full h-full" />
                 </div>
             </div>
             <div className="col-span-1">
                 <div className="h-screen w-full relative block lg:flex lg:items-center lg:justify-center">
                     <div className="h-1/3 lg:hidden w-full">
-                        <img src="/img/resources/login/mobile.png" className="object-cover w-full h-full object-bottom" />
+                        <img alt="login_image_modal" src="/img/resources/login/mobile.png" className="object-cover w-full h-full object-bottom" />
                     </div>
                     <div className="h-2/3 flex items-start lg:items-center justify-start lg:w-[500px] mx-auto p-4">
                         <AnimatePresence>

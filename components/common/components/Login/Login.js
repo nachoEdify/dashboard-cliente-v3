@@ -20,7 +20,7 @@ const Login = ({ t, i18n, type }) => {
     return (
         <div className="h-screen flex-col flex pt-8 px-6 space-y-6 relative bg-background-color overflow-hidden">
             <div className="flex justify-start">
-                <img src={type === 'client' ? "/img/logos/logoPurple.svg" : '/img/logos/logoEmployee.svg'} className={type === 'client' ? "w-24" : "w-52"}  />
+                <img alt="login_image" src={type === 'client' ? "/img/logos/logoPurple.svg" : '/img/logos/logoEmployee.svg'} className={type === 'client' ? "w-24" : "w-52"}  />
             </div>
             {isCode2FA ? (
                 <CodeComponent 

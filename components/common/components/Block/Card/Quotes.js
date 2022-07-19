@@ -6,7 +6,7 @@ const Quotes = ({ title }) => {
     return (
         <div className="bg-white relative h-60 w-full rounded-lg active:scale-98 transition-all duration-200 hover:brightness-[99%] cursor-pointer border">
             <div className="absolute top-0 right-0 p-6">
-                <img src="/img/resources/BlockCards/quote.svg" />
+                <img alt="quote_image" src="/img/resources/BlockCards/quote.svg" />
             </div>
             <div className="absolute top-0 left-0 p-6 w-full h-full">
                 <div className="relative w-full h-full">

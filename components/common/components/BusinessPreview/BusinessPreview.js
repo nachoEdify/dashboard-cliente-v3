@@ -10,7 +10,7 @@ const BusinessPreview = ({
     return (
         <div className="bg-white rounded-lg border grid grid-cols-12 items-start max-h-40">
             <div className="h-full relative col-span-3">
-                <img src={image} className="object-cover max-h-40 h-full rounded-l-lg" />
+                <img alt="business_image" src={image} className="object-cover max-h-40 h-full rounded-l-lg" />
             </div>
             <div className="col-span-9 pl-5 p-2 space-y-4">
                 <div className="font-semibold text-lg">

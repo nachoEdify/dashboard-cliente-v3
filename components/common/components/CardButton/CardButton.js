@@ -75,8 +75,8 @@ const ImageCard = ({ image, children }) =>{
     return (
         <div className="h-full w-[120%] absolute top-0 -left-4 rounded-lg">
             <div className="w-full h-full relative">
-                <img src={image} className="object-cover w-full h-full rounded-lg" />
-                <img src="/img/resources/CardButtons/background.png" className="absolute bottom-0 left-0 w-full h-full opacity-90" />
+                <img alt="cover_image" src={image} className="object-cover w-full h-full rounded-lg" />
+                <img alt="cardbutton_image" src="/img/resources/CardButtons/background.png" className="absolute bottom-0 left-0 w-full h-full opacity-90" />
                 <div className="absolute top-0 left-4 w-full h-full">
                     <div className="relative w-full h-full">
                         {children}

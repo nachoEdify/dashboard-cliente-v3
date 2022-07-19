@@ -33,7 +33,7 @@ const DesktopNavbar = ({ userInfo, children, setSelectedNavView, selectedNavView
             <div className="hidden lg:flex items-center px-12 h-[8vh] border-b">
                 <div className="w-1/12 xl:w-2/12">
                     <Link href="/home">
-                        <img src="/img/logos/logo-edify-color.png" className="w-24 cursor-pointer" />
+                        <img alt="edify" src="/img/logos/logo-edify-color.png" className="w-24 cursor-pointer" />
                     </Link>
                 </div>
                 <div className="w-9/12 xl:w-8/12 flex items-center justify-center lg:space-x-4 xl:space-x-6">

@@ -15,7 +15,7 @@ const EmailComponent = ({
     return (
         <>
             <div className="rounded w-full h-64 relative">
-                <img src={type === 'client' ? "/img/resources/client_login.svg" : "/img/resources/employee_login.svg" } className="object-cover w-full h-full" />
+                <img alt="email_image" src={type === 'client' ? "/img/resources/client_login.svg" : "/img/resources/employee_login.svg" } className="object-cover w-full h-full" />
                 <div className="w-3/4 absolute top-4 left-4 text-white text-2xl">
                     {type === 'client' ? t('me:login.title') : t('me:login.title_employee')}
                 </div>

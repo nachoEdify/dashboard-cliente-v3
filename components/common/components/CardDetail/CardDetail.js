@@ -24,7 +24,7 @@ const CardDetail = ({
             {...props}
         >
             <div className="relative h-56 rounded-md w-full">
-                <img src={image} className={`object-cover w-full h-full rounded-md ${(sold || deleted) && 'grayscale opacity-60'}`} />
+                <img alt="card_detail_image" src={image} className={`object-cover w-full h-full rounded-md ${(sold || deleted) && 'grayscale opacity-60'}`} />
                 {deleted &&
                     <div className="absolute top-4 right-4 bg-orange-400 text-orange-600 font-generalSans font-semibold px-4 py-2 rounded uppercase text-sm">
                         Eliminado

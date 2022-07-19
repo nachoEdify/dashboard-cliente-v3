@@ -12,7 +12,7 @@ const FormInputs = ({ handleJoin }) => {
             animate={{ opacity: 1 }}
         >
             <div>
-                <img src="/img/logos/logo-edify-color.png" className="w-24" />
+                <img alt="edify" src="/img/logos/logo-edify-color.png" className="w-24" />
             </div>
             <div>
                 <h1 className="text-3xl font-bold">Compra y reforma tu casa sin complicaciones.</h1>

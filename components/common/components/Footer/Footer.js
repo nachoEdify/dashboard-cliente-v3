@@ -67,7 +67,7 @@ const Footer = () => {
                 <div className="col-span-3 md:col-span-2 h-56">
                     <div className="bg-gray-100 rounded-lg items-center flex justify-center text-left h-full relative">
                         <span className="text-gray-800 font-generalSans font-bold text-2xl md:text-2xl xl:text-3xl px-12 xl:px-24">Compra o <br/> vende leads de calidad.</span>
-                        <img src="/img/logos/iso_color.svg" className="absolute w-16 -top-6 right-6" />
+                        <img alt="footer_image" src="/img/logos/iso_color.svg" className="absolute w-16 -top-6 right-6" />
                     </div>
                 </div>
             </div>

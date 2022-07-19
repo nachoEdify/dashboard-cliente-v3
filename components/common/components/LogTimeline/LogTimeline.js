@@ -20,7 +20,7 @@ const LogTimeline = ({ logs }) => {
                                 {log?.updatedBy?.avatar?.includes('null') || !log?.updatedBy?.avatar ? (<>
                                     <span>{`${log?.updatedBy?.name?.[0]}${log?.updatedBy?.name?.[1]}`}</span>
                                 </>) : (<>
-                                    <img src={log?.updatedBy?.avatar} className="rounded-full object-cover w-full h-full" />
+                                    <img alt="avatar_image" src={log?.updatedBy?.avatar} className="rounded-full object-cover w-full h-full" />
                                 </>)
                                 }
                             </div>

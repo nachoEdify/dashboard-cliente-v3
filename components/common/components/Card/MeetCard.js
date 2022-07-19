@@ -16,7 +16,7 @@ const MeetCard = ({
                 <div className="absolute top-0 -right-0 p-4">
                     <div className="bg-success-50 text-success-700 flex items-center pl-0.5 pr-2 py-0.5 rounded-full text-xs space-x-1.5">
                         <div className="w-4 h-4 rounded-full relative">
-                            <img src="https://i.pravatar.cc/150" className="w-full h-full object-cover rounded-full" />
+                            <img alt="meet_image" src="https://i.pravatar.cc/150" className="w-full h-full object-cover rounded-full" />
                         </div>
                         <span>Online</span>
                     </div>

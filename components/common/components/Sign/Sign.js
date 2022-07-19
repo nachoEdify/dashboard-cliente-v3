@@ -8,7 +8,7 @@ const Sign = () => {
     return (
         <div className="bg-yellow-100 rounded-xl w-full relative px-12 lg:px-24 py-12">
             <div className="absolute top-0 right-0">
-                <img src="/img/resources/vector.svg" className="rounded-tr-xl" />
+                <img alt="sign_image" src="/img/resources/vector.svg" className="rounded-tr-xl" />
             </div>
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
                 <div className="col-span-2 lg:border-r">

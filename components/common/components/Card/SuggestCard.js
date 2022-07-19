@@ -15,7 +15,7 @@ const SuggestCard = ({
             <div className={`absolute top-0 left-0 p-4 space-y-1 w-full h-full`}>
                 <div className="relative w-full h-full text-left">
                     <div className={`w-2/3 h-[45px] rounded-full`}>
-                        <img src="https://picsum.photos/id/110/400/400" className="w-full h-full object-cover rounded-full object-center" />
+                        <img alt="suggest_image" src="https://picsum.photos/id/110/400/400" className="w-full h-full object-cover rounded-full object-center" />
                     </div>
                     <div className="absolute bottom-0 left-0 w-full whitespace-normal space-y-1">
                         <div className="text-gray-600 flex text-base line-clamp-2">
