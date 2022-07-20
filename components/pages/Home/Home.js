@@ -15,6 +15,7 @@ import SuggestCard from '../../common/components/Card/SuggestCard';
 import Block from '../../common/components/Block/Block';
 import LogTimeline from '../../common/components/LogTimeline/LogTimeline';
 import ActivityNav from '../../common/components/ActivityNav/ActivityNav';
+import NotesNav from '../../common/components/NotesNav/NotesNav';
 
 
 
@@ -123,7 +124,7 @@ const Home = ({ userInfo, handleUpdateUserInfo, isTabletOrMobile, selectedNavVie
                                             title="Propiesta comercial Edify"
                                             extension="pdf"
                                             action="pending"
-                                            width={isTabletOrMobile ? '11.5rem' : '100%'}
+                                            width={isTabletOrMobile ? '10.125rem' : '100%'}
                                         />
                                     </HorizontalShow.Div>
                                 )
@@ -208,21 +209,23 @@ const Home = ({ userInfo, handleUpdateUserInfo, isTabletOrMobile, selectedNavVie
                     </div>
                 </div>
                 {selectedNavView &&
-                    <div className={`hidden lg:col-span-1 overflow-auto bg-gray-50 lg:block space-y-16`}>
+                    <div className={`hidden lg:col-span-1 h-full overflow-auto bg-gray-50 lg:block space-y-16`}>
                         <AnimatePresence>
                             {selectedNavView === 'notes' ? (
                                 <motion.div
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     exit={{ opacity: 0 }}
+                                    className="h-full"
                                 >
-                                    notes
+                                    <NotesNav />
                                 </motion.div>
                             ) : (
                                 <motion.div
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     exit={{ opacity: 0 }}
+                                    className="h-full"
                                 >
                                     <ActivityNav />
                                 </motion.div>

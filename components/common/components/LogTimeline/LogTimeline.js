@@ -37,7 +37,7 @@ const LogTimeline = ({ logs }) => {
                     </div>
                 ))}
             </div>
-            {logs?.length === 0 || !logs &&
+            {(logs?.length === 0 || !logs) &&
                 <EmptyComponent title="No hay actividad reciente" description="Actualmente no tenemos ninguna actividad reciente, sospechoso... 🤔" icon={<BiTaskX />} />
             }
         </div>

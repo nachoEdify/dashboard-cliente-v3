@@ -19,11 +19,11 @@ const tabs = [
 
 const Tabs = ({ tabs, selected, setSelected, className }) => {
     return (
-        <div>
-            <div className={`flex items-end whitespace-nowrap justify-start w-full overflow-auto scroll-transparent space-x-8 text-sm ${className}`}>
+        <div className="space-y-8">
+            <div className={`flex items-end whitespace-nowrap justify-start w-full overflow-auto border-b scroll-transparent space-x-8 text-sm ${className}`}>
                 {tabs.map((tab)=>{
                     return(
-                        <div key={tab.id} onClick={()=>setSelected(tab.id)} className={`pb-[6px] uppercase relative cursor-pointer inline-block items-center font-semibold duration-100 transition-all ${tab?.tag && 'pr-4'} ${tab.id === selected ? 'text-gray-900 border-b-2 border-primary-blue hover:text-black' : 'text-gray-400 border-b-2 border-transparent hover:text-gray-600'}  ${tab?.disabled === true && 'opacity-30'}`}>
+                        <div key={tab.id} onClick={()=>setSelected(tab.id)} className={`pb-[6px] uppercase relative cursor-pointer inline-block items-center font-semibold duration-100 transition-all ${tab?.tag && 'pr-4'} ${tab.id === selected ? 'text-primary-orange border-b-2 border-primary-orange hover:text-black' : 'text-gray-400 border-b-2 border-transparent hover:text-gray-600'}  ${tab?.disabled === true && 'opacity-30'}`}>
                             {tab.title}
                             {tab.tag &&
                                 <div className={`absolute my-auto ${String(tab.tag).length > 2 ? '-right-6' : '-right-4'}`}>

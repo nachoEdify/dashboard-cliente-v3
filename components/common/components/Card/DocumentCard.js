@@ -18,7 +18,7 @@ const DocumentCard = ({
     const ActionComponents = {
         pending: (
             <div className="bg-warning-50 text-warning-700 text-xs px-2 py-1 hover:brightness-95 flex items-center justify-center space-x-1 rounded-full">
-                <span>Pendiente de firmar</span>
+                <span>Firmar ahora</span>
                 <BiRightArrowAlt />
             </div>
         )

@@ -62,6 +62,7 @@ module.exports = {
       "white": "#FFFFFF",
       "black": "#000000",
       "red": "#EF0D36",
+      "transparent": "#00000000",
       "primary": {
         700: '#AC451B',
         900: '#461704'
