@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
-const Block = () => {
+const Block = ({ t }) => {
 
     const swiperRef = useRef(null);
 
@@ -38,27 +38,27 @@ const Block = () => {
     const CARDS = [
         {
             component: BlockCardTypeEnum({ type: "shareFriends" }),
-            title: 'Novedades'
+            title: t('common:home.block_titles.novelty') || 'Novedades'
         },
         {
             component: BlockCardTypeEnum({ type: "rrss" }),
-            title: 'Novedades'
+            title: t('common:home.block_titles.novelty') || 'Novedades'
         },
         {
             component: BlockCardTypeEnum({ type: "news", title: 'Nuevo sistema de comentarios por whatsapp', image: '/img/resources/BlockCards/news.png' }), //https://picsum.photos/id/127/400/400
-            title: 'Noticias' 
+            title: t('common:home.block_titles.news') || 'Noticias'
         },
         {
             component: BlockCardTypeEnum({ type: "blog", title: 'Los mejores barrios para invertir en Valencia', image: 'https://images.unsplash.com/photo-1623567771753-4358772ac0a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2788&q=80' }),
-            title: 'Noticias destacadas' 
+            title: t('common:home.block_titles.outstanding_news') || 'Noticias destacadas' 
         },
         {
             component: BlockCardTypeEnum({ type: "quotes", title: 'Con Edify nos hemos ahorrado +100h buscando casa' }),
-            title: 'Nuestros proyectos' 
+            title: t('common:home.block_titles.our_projects') || 'Nuestros proyectos' 
         },
         {
             component: BlockCardTypeEnum({ type: "about", title: '268.900 €', subtitle: 'Es el precio medio de venta en Patraix, Jesus en Valencia' }),
-            title: 'Sobre tu proyecto' 
+            title: t('common:home.block_titles.about_your_project') || 'Sobre tu proyecto' 
         },
     ]
 

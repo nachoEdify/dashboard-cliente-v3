@@ -1,3 +1,50 @@
 {
-    "title": "Bienvenido {{name}}"
+    "empty_states": {
+        "activity": {
+            "title": "No activities",
+            "description": "You have no activities yet"
+        },
+        "notes": {
+            "title": "Without notes",
+            "description": "No note has been left for you yet, be the first!"
+        },
+        "private_notes": {
+            "title": "Without private notes",
+            "description": "Leave a private note! For you"
+        }
+    },
+    "home": {
+        "greeting": "Hi",
+        "horizontal_show_titles":{
+            "new_properties": "New properties",
+            "next_meetings": "Next meetings",
+            "my_documents": "My documents",
+            "my_tasks": "My tasks",
+            "context_module": "Context module",
+            "we_recommend_you": "We recommend you"
+        },
+        "block_titles":{
+            "novelty": "News",
+            "news": "News",
+            "outstanding_news": "Outstanding news",
+            "our_projects": "Our projects",
+            "about_your_project": "About your project",
+            "buttons": {
+                "read_more": "Read more",
+                "view_all": "View all",
+                "know_more": "Know more",
+                "see_instagram": "See Instagram",
+                "see_history": "See full history"
+            },
+            "instagram": "Follow us on social networks and see our giveaways.",
+            "share": "Invite your friends or family to Edify and win €1,000"
+        }
+    },
+    "notes":{
+        "title": "Notes",
+        "input": {
+            "placeholder": "Write here the content of your note",
+            "button": "Send"
+        }
+    }
 }

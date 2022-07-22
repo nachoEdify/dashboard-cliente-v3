@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-import { BiBed, BiCube, BiPlus, BiRightArrowAlt } from 'react-icons/bi';
+import { BiRightArrowAlt } from 'react-icons/bi';
 import ButtonComponent from '../../common/components/Button/ButtonComponent';
 import PropertyCard from '../../common/components/Card/PropertyCard';
-import CardButton from '../../common/components/CardButton/CardButton';
 import HorizontalShow from '../../common/components/HorizontalShow/HorizontalShow'
-import { numberWithCommas } from '../../common/utils/numberWithCommas';
 import { AnimateSharedLayout, AnimatePresence, motion } from 'framer-motion';
 import MotionModal from '../../common/components/MotionModal/MotionModal';
 import MeetCard from '../../common/components/Card/MeetCard';
@@ -12,14 +10,12 @@ import DocumentCard from '../../common/components/Card/DocumentCard';
 import TaskCard from '../../common/components/Card/TaskCard';
 import ContextCard from '../../common/components/Card/ContextCard';
 import SuggestCard from '../../common/components/Card/SuggestCard';
-import Block from '../../common/components/Block/Block';
-import LogTimeline from '../../common/components/LogTimeline/LogTimeline';
 import ActivityNav from '../../common/components/ActivityNav/ActivityNav';
 import NotesNav from '../../common/components/NotesNav/NotesNav';
 
 
 
-const Home = ({ userInfo, handleUpdateUserInfo, isTabletOrMobile, selectedNavView }) => {
+const Home = ({ userInfo, handleUpdateUserInfo, isTabletOrMobile, selectedNavView, t, i18n }) => {
 
     const [isLoaded, setIsLoaded] = useState(false)
     const [cardId, setCardId] = useState('')
@@ -28,10 +24,10 @@ const Home = ({ userInfo, handleUpdateUserInfo, isTabletOrMobile, selectedNavVie
         <AnimateSharedLayout type="crossfade">
             <MotionModal visible={isLoaded} setVisible={setIsLoaded} layoutId={cardId} />
             <div className="lg:grid lg:grid-cols-3 lg:h-full">
-                <div className={`2xl:w-[1000px] 2xl:mx-auto space-y-6 lg:overflow-auto lg:col-span-2 lg:pr-24 `}> {/*${selectedNavView ? 'lg:col-span-2 lg:pr-24' : 'lg:col-span-3'}*/}
+                <div className={`2xl:w-[1000px] 2xl:mx-auto space-y-6 lg:overflow-auto scroll-transparent lg:col-span-2 lg:pr-24 `}> {/*${selectedNavView ? 'lg:col-span-2 lg:pr-24' : 'lg:col-span-3'}*/}
                     <div className={`p-6 lg:mt-9 lg:pl-20 `}> {/* ${!selectedNavView && 'mx-auto w-[1000px] -translate-x-20'} */}
                         <div className="text-gray-400 lg:text-xl">
-                            👋🏼 Hola Carlos
+                            👋🏼 {t('common:home.greeting')} Carlos
                         </div>
                         <div className="text-gray-800 text-3xl lg:text-4xl font-semibold mt-2">
                             Tienes 3 tareas por completar.
@@ -48,7 +44,7 @@ const Home = ({ userInfo, handleUpdateUserInfo, isTabletOrMobile, selectedNavVie
                     </div>
                     <div className={`space-y-12 `}> {/*${!selectedNavView && 'mx-auto w-[1000px] -translate-x-20'}*/}
                         <HorizontalShow
-                            title="Nuevas propiedades"
+                            title={t('common:home.horizontal_show_titles.new_properties')}
                             isPlusButton={!isTabletOrMobile}
                             isTabletOrMobile={isTabletOrMobile}
                             desktopSize={4}
@@ -81,7 +77,7 @@ const Home = ({ userInfo, handleUpdateUserInfo, isTabletOrMobile, selectedNavVie
                         </HorizontalShow>
 
                         <HorizontalShow
-                            title="Próximas citas"
+                            title={t('common:home.horizontal_show_titles.next_meetings')}
                             isPlusButton={!isTabletOrMobile}
                             isTabletOrMobile={isTabletOrMobile}
                             desktopSize={4}
@@ -106,7 +102,7 @@ const Home = ({ userInfo, handleUpdateUserInfo, isTabletOrMobile, selectedNavVie
                         </HorizontalShow>
 
                         <HorizontalShow
-                            title="Mis documentos"
+                            title={t('common:home.horizontal_show_titles.my_documents')}
                             isPlusButton={!isTabletOrMobile}
                             isTabletOrMobile={isTabletOrMobile}
                             desktopSize={4}
@@ -132,7 +128,7 @@ const Home = ({ userInfo, handleUpdateUserInfo, isTabletOrMobile, selectedNavVie
                         </HorizontalShow>
 
                         <HorizontalShow
-                            title="Mis tareas"
+                            title={t('common:home.horizontal_show_titles.my_tasks')}
                             isPlusButton={!isTabletOrMobile}
                             isTabletOrMobile={isTabletOrMobile}
                             desktopSize={4}
@@ -158,7 +154,7 @@ const Home = ({ userInfo, handleUpdateUserInfo, isTabletOrMobile, selectedNavVie
                         </HorizontalShow>
 
                         <HorizontalShow
-                            title="Módulo contexto"
+                            title={t('common:home.horizontal_show_titles.context_module')}
                             isPlusButton={!isTabletOrMobile}
                             isTabletOrMobile={isTabletOrMobile}
                             desktopSize={4}
@@ -185,7 +181,7 @@ const Home = ({ userInfo, handleUpdateUserInfo, isTabletOrMobile, selectedNavVie
                         </HorizontalShow>
 
                         <HorizontalShow
-                            title="Te recomendamos..."
+                            title={t('common:home.horizontal_show_titles.we_recommend_you')}
                             isPlusButton={!isTabletOrMobile}
                             isTabletOrMobile={isTabletOrMobile}
                             desktopSize={4}

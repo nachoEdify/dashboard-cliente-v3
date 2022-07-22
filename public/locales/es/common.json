@@ -1,3 +1,50 @@
 {
-    "title": "Bienvenido {{name}}"
+    "empty_states": {
+        "activity": {
+            "title": "Sin actividades",
+            "description": "Aún no tienes actividades"
+        },
+        "notes": {
+            "title": "Sin notas",
+            "description": "Aún no se ha dejado ninguna nota para ti, ¡sé el primero!"
+        },
+        "private_notes": {
+            "title": "Sin notas privadas",
+            "description": "¡Deja una nota privada! Para ti"
+        }
+    },
+    "home": {
+        "greeting": "Hi",
+        "horizontal_show_titles":{
+            "new_properties": "Nuevas propiedades",
+            "next_meetings": "Próximas citas",
+            "my_documents": "Mis documentos",
+            "my_tasks": "Mis tareas",
+            "context_module": "Módulo contexto",
+            "we_recommend_you": "Te recomendamos..."
+        },
+        "block_titles":{
+            "novelty": "Novedades",
+            "news": "Noticias",
+            "outstanding_news": "Noticias destacadas",
+            "our_projects": "Nuestros proyectos",
+            "about_your_project": "Sobre tu proyecto",
+            "buttons": {
+                "read_more": "Leer más",
+                "view_all": "Ver todo",
+                "know_more": "Saber más",
+                "see_instagram": "Ver Instagram",
+                "see_history": "Ver historia completa"
+            },
+            "instagram": "Síguenos en las redes sociales y mira nuestros sorteos.",
+            "share": "Invita a tus amigos o familiares a Edify y gana 1.000€"
+        }
+    },
+    "notes":{
+        "title": "Notas",
+        "input": {
+            "placeholder": "Escribe aquí el contenido de tu nota",
+            "button": "Enviar"
+        }
+    }
 }

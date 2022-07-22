@@ -4,8 +4,19 @@ import { createTheme, NextUIProvider } from '@nextui-org/react';
 import { appWithTranslation } from 'next-i18next'
 import { Toaster } from 'react-hot-toast'
 
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
+
 import 'dayjs/locale/es'
 import '../styles/globals.css'
+
+export async function getStaticProps({ locale }){
+  return{
+      props:{
+          ...(await serverSideTranslations(locale, ['common'])),
+      }
+  }
+}
 
 function MyApp({ Component, pageProps }) {
 
@@ -57,6 +68,8 @@ function MyApp({ Component, pageProps }) {
     }
   })
 
+  const { t, i18n } = useTranslation()
+
   return (
     <>
       <Head>
@@ -75,7 +88,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <NextUIProvider theme={theme}>
         <Toaster />
-        <Component {...pageProps} />
+        <Component {...pageProps} t={t} i18n={i18n} />
       </NextUIProvider>
     </>
 
