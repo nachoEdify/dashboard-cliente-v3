@@ -22,7 +22,7 @@ const ShareFriends = () => {
                         ))}
                     </Avatar.Group>
                     <div className="absolute bottom-0 left-0 space-y-3">
-                        <div className="text-gray-800 text-2xl font-semibold lg:5/6 xl:w-2/3">
+                        <div className="text-gray-800 text-2xl font-semibold lg:5/6 xl:w-4/5">
                             Invita a tus amigos o familiares a Edify y <span className="text-primary-orange">gana 1.000€</span>
                         </div>
                         <div className="text-gray-500 text-sm flex items-center space-x-3">

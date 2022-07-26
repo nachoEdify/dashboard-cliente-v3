@@ -37,11 +37,11 @@ const Block = ({ t }) => {
 
     const CARDS = [
         {
-            component: BlockCardTypeEnum({ type: "shareFriends" }),
+            component: BlockCardTypeEnum({ type: "rrss" }),
             title: t('common:home.block_titles.novelty') || 'Novedades'
         },
         {
-            component: BlockCardTypeEnum({ type: "rrss" }),
+            component: BlockCardTypeEnum({ type: "shareFriends" }),
             title: t('common:home.block_titles.novelty') || 'Novedades'
         },
         {
@@ -75,9 +75,13 @@ const Block = ({ t }) => {
                     })}
                 </span>
                 <div className="flex items-center space-x-1">
-                    {CARDS.map((card, index)=>(
-                        <div key={index} onClick={()=>handleChangeSlide(index)} className={`w-2 h-2 rounded-full cursor-pointer bg-gray-200 ${activeIndexSwipe === index && 'bg-primary-orange'} `} />
-                    ))}
+                    {CARDS.map((card, index)=>{
+                        if(CARDS?.length > 1){
+                            return (
+                                <div key={index} onClick={()=>handleChangeSlide(index)} className={`w-2 h-2 rounded-full cursor-pointer bg-gray-200 ${activeIndexSwipe === index && 'bg-primary-orange'} `} />
+                            )
+                        }
+                    })}
                 </div>
             </div>
             <div className="w-full mt-6">

@@ -37,6 +37,7 @@ const Home = ({ userInfo, handleUpdateUserInfo, isTabletOrMobile, selectedNavVie
                                 iconRight={<BiRightArrowAlt size="24" />}
                                 auto
                                 color="primary"
+                                loading={false}
                             >
                                 Completar ahora
                             </ButtonComponent>

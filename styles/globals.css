@@ -71,6 +71,13 @@ body{
     background-color: white !important;
 }
 
+.nextui-c-PJLV.nextui-c-PJLV-dBGXHd-applyStyles-true.nextui-input-content.nextui-input-content--left{
+    background: rgba(239, 239, 239, 0.613)!important;
+    color: #11181c90!important;
+    border-bottom-left-radius: 6px!important;
+    border-top-left-radius: 6px!important;
+}
+
 
 /*  -----  */
 
@@ -88,16 +95,33 @@ body{
 }
 
 .css-1s2u09g-control {
-    padding: 0.2em!important;
+    padding: 0.13em!important;
     border-radius: 8px!important;
     border: 2px solid #dfe3e6!important;
     transition: all .3s!important;
 }
 
+.css-14el2xx-placeholder{
+    font-size: 14px!important;
+    color: #11181c!important;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+.css-qc6sy-singleValue{
+    font-size: 14px!important;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
 .css-1pahdxg-control{
     transition: all .3s!important;
     transform: translateY(-.2em);
-    padding: 0.2em!important;
+    padding: 0.13em!important;
     border-radius: 8px!important;
     border: 2px solid #131313!important;
     box-shadow: 0 0 0 0px transparent !important;
@@ -112,12 +136,12 @@ body{
 }
 
 .css-1n7v3ny-option{
-    background-color: #FFFBEB!important;
+    background-color: #ffede5!important;
 }
 
 .css-9gakcf-option{
-    background-color: #FFEB99!important;
-    color:#002d44!important;
+    background-color: #E16736!important;
+    color:white!important;
 }
 
 .css-qc6sy-singleValue{
@@ -191,6 +215,14 @@ body{
     width:0px;
     height: 3px;
     border-radius: 99px;
+}
+
+.mapboxgl-ctrl-attrib-inner{
+    display: none!important;
+}
+
+.mapboxgl-ctrl-logo{
+    display: none!important;
 }
 
 textarea {

@@ -12,7 +12,18 @@ url: string
 
 */
 
-const Tag = ({ name, Icon, color, bullet = true, className, size = 'md', url, capitalize = false, ...props }) => {
+const Tag = ({ 
+    name, 
+    Icon, 
+    color, 
+    className, 
+    url,
+    flat = true,
+    size = 'md', 
+    bullet = false,
+    capitalize = true, 
+    ...props 
+}) => {
 
     const [id, setId] = useState(nanoid())
     
@@ -27,12 +38,12 @@ const Tag = ({ name, Icon, color, bullet = true, className, size = 'md', url, ca
     return (
         <div className={`rounded-full relative bg-white ${(Icon && !name) && 'h-12 w-12 rounded-full '}`}>
             <span id={id} style={{
-                background: color ? (color + '15') : '#F2F4F7', 
-                color: color || "#344054"
-            }} className={`${name && sizes[size]} ${url && 'cursor-pointer'} z-10 rounded-full flex items-center ${Icon ? 'space-x-0.5' : 'space-x-2'} ${(Icon && !name) && 'h-10 w-10 flex items-center justify-center rounded-full '} ${className}`} {...props} >
+                background: color ? (flat ? (color + '15') : color) : '#F2F4F7', 
+                color: flat ? (color || "#344054") : '#FFFFFF'
+            }} className={`${name && sizes[size]} ${url && 'cursor-pointer'} z-10 rounded-full flex items-center ${Icon ? 'space-x-1' : 'space-x-2'} ${(Icon && !name) && 'h-10 w-10 flex items-center justify-center rounded-full '} ${className}`} {...props} >
                 {Icon ? (
                     <>
-                        <Icon size={18} className="mt-0.5" />
+                        <Icon size={16} />
                     </>
                 ) : (
                     <>
@@ -41,7 +52,7 @@ const Tag = ({ name, Icon, color, bullet = true, className, size = 'md', url, ca
                         }
                     </>
                 )}
-                <span className={"capitalize"}>{name}</span>
+                <span className={capitalize && "capitalize"}>{name}</span>
             </span>
         </div>
     );

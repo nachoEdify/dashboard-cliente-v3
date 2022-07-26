@@ -3,12 +3,14 @@ import Head from 'next/head';
 import { createTheme, NextUIProvider } from '@nextui-org/react';
 import { appWithTranslation } from 'next-i18next'
 import { Toaster } from 'react-hot-toast'
-
+import mapboxgl from 'mapbox-gl'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 
 import 'dayjs/locale/es'
 import '../styles/globals.css'
+
+mapboxgl.accessToken = 'pk.eyJ1IjoiZWRpZnlob3VzZXMiLCJhIjoiY2t2bWx6Mm56MTBpYTJyb3VxZnRncHRqbCJ9.0plR06h1hVcfk_AKwSxf8w';
 
 export async function getStaticProps({ locale }){
   return{
@@ -76,6 +78,7 @@ function MyApp({ Component, pageProps }) {
         <title>Example</title>
         
         // App Icon - https://realfavicongenerator.net/
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon_package/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon_package/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon_package/favicon-16x16.png" />
@@ -85,6 +88,8 @@ function MyApp({ Component, pageProps }) {
         <meta name="application-name" content="Example" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
+
+
       </Head>
       <NextUIProvider theme={theme}>
         <Toaster />

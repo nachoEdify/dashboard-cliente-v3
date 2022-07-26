@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Loading } from '@nextui-org/react';
 
-const ButtonComponent = ({ children, color, onClick, loading, borderColor, auto, textColor = 'white', disabled = false, ...props}) => {
+const ButtonComponent = ({ children, color, onClick, loading, borderColor, auto, textColor = 'white', icon, disabled = false, ...props}) => {
     return (
         <Button
             onClick={onClick}
@@ -33,6 +33,7 @@ const ButtonComponent = ({ children, color, onClick, loading, borderColor, auto,
                 <div className="relative">
                     <Loading 
                         type="spinner" 
+                        className="translate-y-1"
                         color={color === 'light' ? "currentColor" : "white"}
                     />
                 </div>
