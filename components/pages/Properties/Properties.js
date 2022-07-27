@@ -6,8 +6,12 @@ import { handleMoveLocationGPS } from '../../common/utils/handleMoveLocationGPS'
 import { numberWithCommas } from '../../common/utils/numberWithCommas';
 import { handleShowProperty } from './utils/handleShowProperty';
 import { handleHideProperty } from './utils/handleHideProperty';
+import PropertiesFilter from './components/PropertiesFilter';
+import { BiListUl, BiMapAlt } from 'react-icons/bi';
 
-const Properties = () => {
+const Properties = ({ isTabletOrMobile }) => {
+
+    const [isList, setIsList] = useState(true)
 
     const POLYGON = [
         [
@@ -130,8 +134,37 @@ const Properties = () => {
 
     return (
         <div className="h-full w-full relative">
-            <PropertiesWrapper PROPERTIES={PROPERTIES} />
-            <MapComponent markers={PROPERTIES} polygons={POLYGON} zoom={13.5} center={handleMoveLocationGPS(POLYGON?.[0]?.[0], 15)} />
+            <div className="w-full px-8 py-3 border-b lg:hidden">
+                <PropertiesFilter />
+            </div>
+            {isList &&
+                <PropertiesWrapper PROPERTIES={PROPERTIES} />
+            }
+            <div className={isTabletOrMobile ? (isList ? "hidden" : "w-full h-full") : "lg:block w-full h-full"}>
+                <MapComponent height={isTabletOrMobile && '50rem'} markers={PROPERTIES} polygons={POLYGON} zoom={13.5} center={isTabletOrMobile ? handleMoveLocationGPS(POLYGON?.[0]?.[0], -25) : handleMoveLocationGPS(POLYGON?.[0]?.[0], 15)} />
+            </div>
+            <div className="fixed w-full justify-center flex items-center bottom-28 lg:hidden h-0 rounded-full z-10">
+                <div className="bg-white rounded-full shadow px-4 py-1.5 ">
+                    {isList ? (
+                        <span onClick={()=>{
+                            window.scrollTo(0, 0);
+                            setIsList(false)
+                        }} className="space-x-2 flex items-center">
+                            <BiMapAlt />
+                            <span>
+                                Ver Mapa
+                            </span>
+                        </span>
+                    ) : (
+                        <span onClick={()=>setIsList(true)} className="space-x-2 flex items-center">
+                            <BiListUl />
+                            <span>
+                                Ver Listado
+                            </span>
+                        </span>
+                    )}
+                </div>
+            </div>
         </div>
     );
 }

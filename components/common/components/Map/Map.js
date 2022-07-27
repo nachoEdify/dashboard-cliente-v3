@@ -62,7 +62,7 @@ const MapComponent = ({
         
         map.addControl(new mapboxgl.NavigationControl()); // Add zoom and rotation controls to the map.
         handleAddExtras({ polygons, markers, markerIdSelected, map }) // Add polygons and markers to the map
-    }, [polygons, markers, markerIdSelected])
+    }, [polygons, markers, markerIdSelected, handleAddExtras, height, handleSetHeight])
     
 
     return (

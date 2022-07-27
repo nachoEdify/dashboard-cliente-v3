@@ -5,6 +5,7 @@ import { BiSearch } from 'react-icons/bi';
 import { propertyStateEnum } from '../../../common/enums/propertyStateEnum';
 
 /*
+
     COSAS A TENER EN CUENTA
     -> EmptyState Dinámico
     -> 3 números busca por máximo metros cuadrados
@@ -29,10 +30,12 @@ const PropertiesFilter = () => {
             {children}
           </components.Control>
         );
-    };
+
+    }
+
 
     return (
-        <div className="w-full justify-between flex items-center space-x-8">
+        <div className="w-full justify-between flex items-center space-x-4 lg:space-x-8">
             <div className="w-1/2">
                 <Input 
                     bordered 

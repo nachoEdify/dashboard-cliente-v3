@@ -8,7 +8,7 @@ export const handleShowProperty = ({e, property }) =>{
     let y = e.clientY
 
     const propertyCard = document.createElement('div');
-    propertyCard.className = `w-44 h-64 bg-white rounded-lg shadow absolute z-10 ${property?.state === 'DISCARDED' && 'opacity-90'}`
+    propertyCard.className = `w-56 h-64 bg-white rounded-lg shadow absolute z-10 ${property?.state === 'DISCARDED' && 'opacity-90'}`
     propertyCard.style.transform = 'translate(-50%, -50%)'
     propertyCard.id = `id_property_${property?.id}`
     propertyCard.style.left = (x - 40) + 'px'
@@ -35,7 +35,7 @@ export const handleShowProperty = ({e, property }) =>{
     infoLocation.className = 'text-gray-500 line-clamp-1 text-sm px-2 py-0.5'
     infoLocation.textContent = property?.city + ', ' + property?.country
     const infoExtras = document.createElement('div')
-    infoExtras.className = 'flex py-2 px-2 items-center space-x-4'
+    infoExtras.className = 'flex py-2 px-2 items-center space-x-5'
     const extrasArea = document.createElement('div')
     extrasArea.className = 'text-gray-500 text-sm'
     extrasArea.textContent = `📦 ${property?.area} m²`

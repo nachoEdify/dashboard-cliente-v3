@@ -62,7 +62,7 @@ const PropertyCard = ({
     }
 
     return (
-        <div onMouseOver={()=> onMouseOver && onMouseOver(id)} className="w-full h-[22rem] active:scale-98 border rounded-lg duration-200 transition-all hover:border-gray-400">
+        <div onMouseOver={()=> onMouseOver && onMouseOver(id)} className="w-full bg-white h-[22rem] active:scale-98 border rounded-lg duration-200 transition-all hover:border-gray-400">
             <div className="h-[13rem] w-full relative bg-white rounded-t-lg">
                 <Swiper
                     {...params}
