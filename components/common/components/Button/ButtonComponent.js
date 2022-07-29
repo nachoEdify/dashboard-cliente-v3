@@ -1,7 +1,18 @@
 import React from 'react'
 import { Button, Loading } from '@nextui-org/react';
 
-const ButtonComponent = ({ children, color, onClick, loading, borderColor, auto, textColor = 'white', icon, disabled = false, ...props}) => {
+const ButtonComponent = ({ 
+    children, 
+    color, 
+    onClick, 
+    loading, 
+    borderColor, 
+    auto,
+    height = 'max-content',
+    textColor = 'white', 
+    disabled = false, 
+    ...props
+}) => {
     return (
         <Button
             onClick={onClick}
@@ -10,7 +21,7 @@ const ButtonComponent = ({ children, color, onClick, loading, borderColor, auto,
             css={color === 'light' ? {
                 width: auto ? 'auto' : '100%',
                 opacity: disabled ? '.5' : '1',
-                height: 'max-content',
+                height,
                 borderColor,
                 borderRadius: '6px!important', // radii.xs
                 background: `$white!important`, // colors.pink800
@@ -19,7 +30,7 @@ const ButtonComponent = ({ children, color, onClick, loading, borderColor, auto,
                 boxShadow: 'none!important', // shadows.md
             } : { 
                 width: auto ? 'auto' : '100%',
-                height: 'max-content',
+                height,
                 opacity: disabled ? '.5' : '1',
                 borderColor,
                 borderRadius: '6px!important', // radii.xs

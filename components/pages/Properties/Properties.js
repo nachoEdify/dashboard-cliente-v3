@@ -1,17 +1,21 @@
 import React, { useState } from 'react'
-import { nanoid } from 'nanoid'
+import { BiListUl, BiMapAlt, BiPlus } from 'react-icons/bi';
+import { FiSettings } from 'react-icons/fi'
 import MapComponent from '../../common/components/Map/Map';
 import PropertiesWrapper from './components/PropertiesWrapper';
 import { handleMoveLocationGPS } from '../../common/utils/handleMoveLocationGPS';
-import { numberWithCommas } from '../../common/utils/numberWithCommas';
 import { handleShowProperty } from './utils/handleShowProperty';
 import { handleHideProperty } from './utils/handleHideProperty';
 import PropertiesFilter from './components/PropertiesFilter';
-import { BiListUl, BiMapAlt } from 'react-icons/bi';
+import ButtonComponent from '../../common/components/Button/ButtonComponent';
+import SendPropertyModal from '../../common/components/SendPropertyModal/SendPropertyModal';
+import SearchCriteriaModal from '../../common/components/SearchCriteriaModal/SearchCriteriaModal';
 
 const Properties = ({ isTabletOrMobile }) => {
 
     const [isList, setIsList] = useState(true)
+    const [isVisibleAddProperty, setIsVisibleAddProperty] = useState(false)
+    const [isVisibleSearchCriteria, setIsVisibleSearchCriteria] = useState(false)
 
     const POLYGON = [
         [
@@ -134,8 +138,10 @@ const Properties = ({ isTabletOrMobile }) => {
 
     return (
         <div className="h-full w-full relative">
+            <SendPropertyModal visible={isVisibleAddProperty} setVisible={setIsVisibleAddProperty} isTabletOrMobile={isTabletOrMobile} />
+            <SearchCriteriaModal visible={isVisibleSearchCriteria} setVisible={setIsVisibleSearchCriteria} isTabletOrMobile={isTabletOrMobile} />
             <div className="w-full px-8 py-3 border-b lg:hidden">
-                <PropertiesFilter />
+                <PropertiesFilter mobile={true} setIsVisibleAddProperty={setIsVisibleAddProperty} />
             </div>
             {isList &&
                 <PropertiesWrapper PROPERTIES={PROPERTIES} />
@@ -164,6 +170,24 @@ const Properties = ({ isTabletOrMobile }) => {
                         </span>
                     )}
                 </div>
+            </div>
+            <div className="hidden lg:flex justify-end items-center absolute bottom-4 right-4 space-x-2">
+                <ButtonComponent 
+                    color="light"
+                    icon={<BiPlus />}
+                    auto
+                    onClick={()=>setIsVisibleAddProperty(true)}
+                >
+                    Enviar propiedad
+                </ButtonComponent>
+                <ButtonComponent 
+                    color="light"
+                    icon={<FiSettings />}
+                    auto
+                    onClick={()=>setIsVisibleSearchCriteria(true)}
+                >
+                    Criterios de Búsqueda
+                </ButtonComponent>
             </div>
         </div>
     );

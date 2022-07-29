@@ -17,13 +17,15 @@ const MobileModal = ({ children, visible, setVisible, height = 'auto', cancelBut
                             initial={{ height: 0 }}
                             animate={{ height }}
                             exit={{ height: 0 }}
-                            className={`fixed bottom-0 left-0 w-full bg-white space-y-4 pb-4 ${isPadding ? 'p-4' : ''}`}
+                            className={`fixed bottom-0 left-0 w-full bg-white pb-4 ${isPadding ? 'p-4 space-y-4' : ''}`}
                         >
                             {children}
                             {cancelButton &&
-                                <ButtonComponent onClick={()=>setVisible(false)} color="light" size="lg">
-                                    Cancelar
-                                </ButtonComponent>
+                                <div className={!isPadding && 'px-4'}>
+                                    <ButtonComponent onClick={()=>setVisible(false)} color="light" size="lg">
+                                        Cancelar
+                                    </ButtonComponent>
+                                </div>
                             }
                         </motion.div>
                     </motion.div>
